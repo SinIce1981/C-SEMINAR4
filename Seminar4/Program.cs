@@ -57,23 +57,38 @@ void Zadacha30()
     Random random = new Random();
     int size = random.Next(4, 10);
     int[] numbers = new int[size];
-
     Console.WriteLine(size);
+     
+    FillArray(numbers);
+    PrintArray(numbers);
 
-    for (int i = 0; i<size; i++)
-    {
-        numbers[i] = random.Next(0, 2);
-    }
-    for (int i = 0; i<size; i++)
-    {
-        Console.Write(numbers[i] + " " );
+    // for (int i = 0; i<size; i++)
+    // {
+    //     numbers[i] = random.Next(0, 2);
+    // }
+    // for (int i = 0; i<size; i++)
+    // {
+    //     Console.Write(numbers[i] + " " );
        
-    }
+    // }
      Console.WriteLine();
 }
 
-void FillArray()
+void FillArray(int[]num)
 {
-    
+    Random random = new Random();
+    for (int i = 0; i<num.Length; i++)
+    {
+        num[i] = random.Next(0, 2);
+ 
+    }
+}
+    void PrintArray(int[]num)
+{
+    Random random = new Random();
+    for (int i = 0; i<num.Length; i++)
+    {
+        Console.Write(num[i]+ "  ");
+    }
 }
 Zadacha30 ();
